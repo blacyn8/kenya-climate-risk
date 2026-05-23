@@ -1,0 +1,40 @@
+---
+title: "Spatio-Temporal Bayesian Hierarchical Modeling for Climate-Driven Financial Risk in Kenya"
+author: "Your Name"
+date: "May 2026"
+institution: "University of Mathematical Sciences"
+format: pdf
+---
+
+## 1. Introduction
+Agricultural market dynamics within Kenya are deeply vulnerable to erratic seasonal precipitation. This paper presents a programmatic approach to estimating the risk profiles of localized food price inflation driven by lagging spatial climate stressors.
+
+## 2. Methodology & Data Infrastructure
+We implement a robust, reproducible multi-stage data architecture:
+1. **Ingestion:** Raw historical data is processed via Python into an indexed SQLite database.
+2. **Spatial Topology:** A 47x47 Contiguity Weight Matrix is constructed to map boundary coordinates.
+3. **Statistical Formulations:** We establish a generalized linear mixed model under a Log-Normal likelihood:
+
+$$Y_{it} \sim \text{Log-Normal}(\mu_{it}, \sigma^2)$$
+
+$$\mu_{it} = \beta_0 + \beta_1 X_{i, t-3} + s_i + \gamma_t$$
+
+Where:
+* $Y_{it}$ represents the commodity market price in county $i$ during month $t$.
+* $X_{i, t-3}$ is the localized historical rainfall aggregate lagged by three months.
+* $s_i$ represents the spatial random effects across neighboring coordinates.
+* $\gamma_t$ accounts for fixed macro-economic temporal trends.
+
+## 3. Statistical Analysis & Model Summary
+Below is the live execution printout compiled directly from our Bayesian simulation chains:
+
+```{r}
+#| label: model-diagnostics
+#| echo: false
+# This block automatically fetches the live model summary from your memory session
+if(exists("fit_climate_risk")) {
+  summary(fit_climate_risk)
+} else {
+  print("Waiting for local Markov Chain Monte Carlo chains to finalize processing...")
+}
+```
