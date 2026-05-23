@@ -1,5 +1,9 @@
 # Spatio-Temporal Bayesian Hierarchical Modeling for Climate-Driven Financial Risk in Kenya
 
+**Author:** Blacyn Ochieng  
+**Degree:** BSc in Mathematical Sciences (Statistics Specialization)  
+**Academic Year:** 2026  
+
 An advanced, end-to-end statistical computing project that quantifies how localized, lagged geographical climate shocks propagate into commodity price inflation and agricultural economic volatility across Kenyan markets.
 
 ---
